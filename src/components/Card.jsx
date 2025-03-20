@@ -15,17 +15,17 @@ export const Card = ({
 }) => {
   const [added, setAdded] = useState(false);
   return (
-    <div className="tarjeta">
-      <img src={image} alt={title} className="tarjeta-imagen" />
-      <div className="tarjeta-contenido">
-        <h3 className="tarjeta-titulo">{title}</h3>
-        <p className="tarjeta-descripcion">{description}</p>
-        <p className="tarjeta-precio">${price}</p>
+    <div className="card">
+      <img src={image} alt={title} className="card-image" />
+      <div className="card-content">
+        <h3 className="card-title">{title}</h3>
+        <p className="card-description">{description}</p>
+        <p className="card-price">${price}</p>
       </div>
 
       {added ? (
         <button
-          className="boton-quitar"
+          className="btn-remove"
           type="button"
           onClick={() => {
             setAdded(false);
@@ -36,7 +36,7 @@ export const Card = ({
         </button>
       ) : (
         <button
-          className="boton-agregar"
+          className="btn-add"
           type="button"
           onClick={() => {
             setAdded(true);
