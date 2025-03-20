@@ -9,17 +9,23 @@ export const Card = ({
   price,
   onAddItem,
   onRemoveItem,
+  added,
   onIncreaseQuantity,
   onDecreaseQuantity,
   onClearShoppingCart,
 }) => {
-  const [added, setAdded] = useState(false);
+
+  const truncateTitle = (title) => {
+    return title.length > 46 ? title.substring(0, 46) + "..." : title;
+  }
+
   return (
     <div className="card">
-      <img src={image} alt={title} className="card-image" />
+      <div className="image-container">
+        <img src={image} alt={title} className="card-image" />
+      </div>
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-description">{description}</p>
+        <h5 className="card-title">{truncateTitle(title)}</h5>
         <p className="card-price">${price}</p>
       </div>
 
@@ -28,7 +34,6 @@ export const Card = ({
           className="btn-remove"
           type="button"
           onClick={() => {
-            setAdded(false);
             onRemoveItem();
           }}
         >
@@ -39,7 +44,6 @@ export const Card = ({
           className="btn-add"
           type="button"
           onClick={() => {
-            setAdded(true);
             onAddItem();
           }}
         >

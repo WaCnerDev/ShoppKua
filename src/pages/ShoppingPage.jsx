@@ -3,6 +3,7 @@ import { Card } from "../components/Card";
 import { ProductContext } from "../context/ProductContext";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
 import "../styles/ShoppingCart.css";
+import { Footer } from "../components/Footer";
 
 export const ShoppingPage = () => {
   const { products } = useContext(ProductContext);
@@ -35,24 +36,29 @@ export const ShoppingPage = () => {
     clearShoppingCart();
   };
 
+  const isAdded = (id) => {
+    return shoppingList.some((item) => item.id === id);
+  };
+
   return (
     <>
-      <h1>List of products</h1>
-      <hr />
-      {products.map((product) => (
-        <Card
-          key={product.id}
-          image={product.image}
-          title={product.title}
-          description={product.description}
-          price={product.price}
-          onAddItem={() => handlerAddItem(product)}
-          onRemoveItem={() => handlerRemoveItem(product.id)}
-          onIncreaseQuantity={handlerIncreaseQuantity}
-          onDecreaseQuantity={handlerDecreaseQuantity}
-          onClearShoppingCart={handlerClearShoppingCart}
-        />
-      ))}
+      <div className="grid-layout">
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            added={isAdded(product.id)}
+            onAddItem={() => handlerAddItem(product)}
+            onRemoveItem={() => handlerRemoveItem(product.id)}
+            onIncreaseQuantity={handlerIncreaseQuantity}
+            onDecreaseQuantity={handlerDecreaseQuantity}
+            onClearShoppingCart={handlerClearShoppingCart}
+          />
+        ))}
+      </div>
     </>
   );
 };
