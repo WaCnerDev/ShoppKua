@@ -26,12 +26,12 @@ This project originated as a final assignment for a course. As a personal challe
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/WaCnerDev/shopping-cart.git
+    git clone https://github.com/WaCnerDev/shoppkua.git
     ```
 2.  Navigate to the project directory:
 
     ```bash
-    cd shopping-cart
+    cd shoppkua
     ```
 3.  Install dependencies:
 
