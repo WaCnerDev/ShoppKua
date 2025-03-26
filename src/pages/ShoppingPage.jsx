@@ -3,7 +3,6 @@ import { Card } from "../components/Card";
 import { ProductContext } from "../context/ProductContext";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
 import "../styles/ShoppingCart.css";
-import { Footer } from "../components/Footer";
 
 export const ShoppingPage = () => {
   const { products } = useContext(ProductContext);
@@ -50,6 +49,7 @@ export const ShoppingPage = () => {
             title={product.title}
             description={product.description}
             price={product.price}
+            rating={product.rating}
             added={isAdded(product.id)}
             onAddItem={() => handlerAddItem(product)}
             onRemoveItem={() => handlerRemoveItem(product.id)}
