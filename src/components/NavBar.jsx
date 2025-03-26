@@ -16,7 +16,7 @@ export const NavBar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink to="/" className="nav-link active">
-                Compras
+                Products
               </NavLink>
             </li>
           </ul>
