@@ -21,43 +21,45 @@ export const Card = ({
 
   return (
     <div className="card">
-      <div className="image-container">
-        <img src={image} alt={title} className="card-image" />
-      </div>
-      <div className="card-content">
-        <h5 className="card-title">{truncateTitle(title)}</h5>
-        <div className="d-flex justify-content-between pb-2">
-          <Rating
-            name="half-rating-read"
-            defaultValue={rating.rate}
-            precision={0.5}
-            readOnly
-          />
-          <p className="card-price">${price}</p>
+      <div className="card-body">
+        <div className="image-container">
+          <img src={image} alt={title} className="card-image" />
         </div>
-      </div>
+        <div className="card-content">
+          <h5 className="card-title">{truncateTitle(title)}</h5>
+          <div className="d-flex justify-content-between pb-2">
+            <Rating
+              name="half-rating-read"
+              defaultValue={rating.rate}
+              precision={0.5}
+              readOnly
+            />
+            <p className="card-price">${price}</p>
+          </div>
+        </div>
 
-      {added ? (
-        <button
-          className="btn-remove"
-          type="button"
-          onClick={() => {
-            onRemoveItem();
-          }}
-        >
-          Remove
-        </button>
-      ) : (
-        <button
-          className="btn-add"
-          type="button"
-          onClick={() => {
-            onAddItem();
-          }}
-        >
-          Add
-        </button>
-      )}
+        {added ? (
+          <button
+            className="btn-remove"
+            type="button"
+            onClick={() => {
+              onRemoveItem();
+            }}
+          >
+            Remove
+          </button>
+        ) : (
+          <button
+            className="btn-add"
+            type="button"
+            onClick={() => {
+              onAddItem();
+            }}
+          >
+            Add
+          </button>
+        )}
+      </div>
     </div>
   );
 };
