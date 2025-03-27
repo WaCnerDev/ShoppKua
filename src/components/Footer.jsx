@@ -5,11 +5,15 @@ import XIcon from "@mui/icons-material/Twitter"; // Twitter icon is now called X
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailIcon from "@mui/icons-material/Mail";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import MapIcon from "@mui/icons-material/Map";
+import WatchLaterIcon from "@mui/icons-material/WatchLater";
 
 export const Footer = () => {
   return (
     <footer>
       <div className="container py-5 border-top">
+        {/* Row 1 */}
         <div className="row">
           {/* Column 1: About */}
           <div className="col-md-3">
@@ -170,25 +174,67 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+        {/* Row 2 */}
         <div className="row">
-          <h3 className="h6 text-uppercase font-weight-bold mb-3">
-            Contact Us
-          </h3>
-          <ul className="list-unstyled text-muted small">
-            <li className="d-flex align-items-start mb-2">
-              <MailIcon className="me-2 text-muted" />
-              <span>support@shoppkua.com</span>
-            </li>
-            <li className="mb-2">
-              <span>Phone: +1 (555) 123-4567</span>
-            </li>
-            <li>
-              <span>Monday to Friday: 9am - 6pm</span>
-            </li>
-          </ul>
+          {/* Column 5: Contact Us */}
+          <div className="col-md-3">
+            <h3 className="h6 text-uppercase font-weight-bold mb-3">
+              Contact Us
+            </h3>
+            <ul className="list-unstyled text-muted small">
+              <li className="d-flex align-items-start mb-2">
+                <MailIcon className="me-2 text-muted" fontSize="small" />
+                <span>support@shoppkua.com</span>
+              </li>
+              <li className="mb-2">
+                <LocalPhoneIcon className="me-2 text-muted" fontSize="small" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li>
+                <WatchLaterIcon className="me-2 text-muted" fontSize="small" />
+                <span>Monday to Friday: 9am - 6pm</span>
+              </li>
+              <li className="mt-2">
+                <a
+                  href="https://www.google.com/maps/place/37.7749,-122.4194"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted"
+                >
+                  <MapIcon className="me-2 text-muted" fontSize="small" />
+                  <span>1234 Market Street, Springfield, USA</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* Column 6: Follow Us */}
+          <div className="col-md-3">
+            <h3 className="h6 text-uppercase font-weight-bold mb-3">
+              Follow Us
+            </h3>
+            <ul className="list-unstyled small text-muted">
+              <li className="mb-2">
+                <a href="#" className="text-reset">
+                  <FacebookIcon className="me-2" />
+                  Facebook
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-reset">
+                  <InstagramIcon className="me-2" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-reset">
+                  <i class="bi bi-tiktok me-2 fs-5"></i>Tiktok
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         {/* Copyright */}
-        <div className="mt-4 pt-4 border-top text-center">
+        <div className="pt-5 border-top text-center">
           <p className="text-muted small">
             © 2025 SHOPPKUA. All rights reserved.
           </p>
