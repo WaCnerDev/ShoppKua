@@ -8,6 +8,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MapIcon from "@mui/icons-material/Map";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -22,39 +23,39 @@ export const Footer = () => {
             </h3>
             <ul className="list-unstyled">
               <li>
-                <a href="/history" className="text-muted small d-block">
+                <Link to="/history" className="text-muted small d-block">
                   Company History
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/mission" className="text-muted small d-block">
+                <Link to="/mission" className="text-muted small d-block">
                   Mission
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/vision" className="text-muted small d-block">
+                <Link to="/vision" className="text-muted small d-block">
                   Vision
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/values" className="text-muted small d-block">
+                <Link to="/values" className="text-muted small d-block">
                   Values
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/SRS" className="text-muted small d-block">
+                <Link to="/SRS" className="text-muted small d-block">
                   Sustainability and Social Responsibility
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/OurTeam" className="text-muted small d-block">
+                <Link to="/OurTeam" className="text-muted small d-block">
                   Our Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/careers" className="text-muted small d-block">
+                <Link to="/careers" className="text-muted small d-block">
                   Careers
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -64,51 +65,51 @@ export const Footer = () => {
             <h3 className="h6 text-uppercase font-weight-bold mb-3">Shop</h3>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="/category/clothing"
+                <Link
+                  to="/category/clothing"
                   className="text-muted small d-block"
                 >
                   Clothing
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/accessories"
+                <Link
+                  to="/category/accessories"
                   className="text-muted small d-block"
                 >
                   Accessories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/footwear"
+                <Link
+                  to="/category/footwear"
                   className="text-muted small d-block"
                 >
                   Footwear
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/electronics"
+                <Link
+                  to="/category/electronics"
                   className="text-muted small d-block"
                 >
                   Electronics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/category/home" className="text-muted small d-block">
+                <Link to="/category/home" className="text-muted small d-block">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/offers" className="text-muted small d-block">
+                <Link to="/offers" className="text-muted small d-block">
                   Offers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/new-products" className="text-muted small d-block">
+                <Link to="/new-products" className="text-muted small d-block">
                   New Products
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,34 +121,34 @@ export const Footer = () => {
             </h3>
             <ul className="list-unstyled">
               <li>
-                <a href="/contact" className="text-muted small d-block">
+                <Link to="/contact" className="text-muted small d-block">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="text-muted small d-block">
+                <Link to="/faq" className="text-muted small d-block">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/shipping" className="text-muted small d-block">
+                <Link to="/shipping" className="text-muted small d-block">
                   Shipping & Delivery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/returns" className="text-muted small d-block">
+                <Link to="/returns" className="text-muted small d-block">
                   Returns & Refunds
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/size-guide" className="text-muted small d-block">
+                <Link to="/size-guide" className="text-muted small d-block">
                   Size Guide
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/track-order" className="text-muted small d-block">
+                <Link to="/track-order" className="text-muted small d-block">
                   Track Order
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -157,19 +158,19 @@ export const Footer = () => {
             <h3 className="h6 text-uppercase font-weight-bold mb-3">Legal</h3>
             <ul className="list-unstyled mb-4">
               <li>
-                <a href="/terms" className="text-muted small d-block">
+                <Link to="/terms" className="text-muted small d-block">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy" className="text-muted small d-block">
+                <Link to="/privacy" className="text-muted small d-block">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cookies" className="text-muted small d-block">
+                <Link to="/cookies" className="text-muted small d-block">
                   Cookie Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -227,7 +228,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-reset">
-                  <i class="bi bi-tiktok me-2 fs-5"></i>Tiktok
+                  <i className="bi bi-tiktok me-2 fs-5"></i>Tiktok
                 </a>
               </li>
             </ul>
