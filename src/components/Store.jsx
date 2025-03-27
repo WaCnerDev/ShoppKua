@@ -7,7 +7,7 @@ import { ProductProvider } from "../context/ProductProvider";
 import { ShoppingCartProvider } from "../context/ShoppingCartProvider";
 import { Footer } from "./Footer";
 
-export const Car = () => {
+export const Store = () => {
   return (
     <ProductProvider>
       <ShoppingCartProvider>
