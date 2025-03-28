@@ -6,12 +6,13 @@ import { ShoppingCartPage } from "../pages/ShoppingCartPage";
 import { ProductProvider } from "../context/ProductProvider";
 import { ShoppingCartProvider } from "../context/ShoppingCartProvider";
 import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const Store = () => {
   return (
     <ProductProvider>
       <ShoppingCartProvider>
-        <NavBar />
+        <Header />
         <div className="container py-5">
           <Routes>
             <Route path="/" element={<ShoppingPage />} />
