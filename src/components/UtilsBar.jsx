@@ -6,14 +6,15 @@ import { useContext } from "react";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export const UtilsBar = () => {
   const { shoppingList } = useContext(ShoppingCartContext);
   return (
-    <div className="d-flex justify-content-between align-items-center py-2 px-4 border-bottom bg-light">
+    <div className="d-flex justify-content-around align-items-center border-bottom py-2  bg-light">
       <Link
         to="/"
-        className="d-flex align-items-center gap-1 navbar-brand fs-4"
+        className="d-flex align-items-center gap-1 navbar-brand fs-4 text-success"
       >
         <img
           src={CloverShoppKua}
@@ -34,7 +35,8 @@ export const UtilsBar = () => {
       </div>
       <div className="d-flex align-items-center gap-3">
         <Link to="/wishlist" className="nav-link active">
-          <button className="btn btn-outline-primary rounded-pill px-4">
+          <button className="btn btn-outline-success d-flex align-items-center rounded-pill px-4">
+            <FavoriteIcon className="me-1" />
             Wishlist
           </button>
         </Link>

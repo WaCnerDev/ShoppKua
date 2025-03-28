@@ -7,11 +7,6 @@ export const NavBar = () => {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center w-100 gap-4">
         <li className="nav-item">
           <NavLink to="/" className="nav-link active">
-            Products
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/" className="nav-link active">
             Clothes
           </NavLink>
         </li>
