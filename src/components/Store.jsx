@@ -1,5 +1,4 @@
 import React from "react";
-import { NavBar } from "./NavBar";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ShoppingPage } from "../pages/ShoppingPage";
 import { ShoppingCartPage } from "../pages/ShoppingCartPage";

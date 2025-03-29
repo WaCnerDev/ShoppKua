@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Card } from "../components/Card";
 import { ProductContext } from "../context/ProductContext";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
@@ -6,6 +6,8 @@ import "../styles/ShoppingCart.css";
 
 export const ShoppingPage = () => {
   const { products } = useContext(ProductContext);
+  const [isLoading, setIsLoading] = useState(true);
+
   const {
     shoppingList,
     addShoppingItem,
@@ -39,6 +41,10 @@ export const ShoppingPage = () => {
     return shoppingList.some((item) => item.id === id);
   };
 
+  useEffect(() => {
+    setIsLoading(products.length > 0);
+  }, [products]);
+
   return (
     <>
       <div className="grid-layout">
@@ -51,6 +57,7 @@ export const ShoppingPage = () => {
             price={product.price}
             rating={product.rating}
             added={isAdded(product.id)}
+            isLoading={isLoading}
             onAddItem={() => handlerAddItem(product)}
             onRemoveItem={() => handlerRemoveItem(product.id)}
             onIncreaseQuantity={handlerIncreaseQuantity}

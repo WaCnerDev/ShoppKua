@@ -5,16 +5,14 @@ import Rating from "@mui/material/Rating";
 export const Card = ({
   image,
   title,
-  description,
   price,
   rating,
   onAddItem,
   onRemoveItem,
   added,
-  onIncreaseQuantity,
-  onDecreaseQuantity,
-  onClearShoppingCart,
+  isLoading,
 }) => {
+  // Function to truncate the title if it exceeds 46 characters
   const truncateTitle = (title) => {
     return title.length > 46 ? title.substring(0, 46) + "..." : title;
   };

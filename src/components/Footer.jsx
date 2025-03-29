@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="row">
           {/* Column 1: About */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">
+            <h3 className="h6 text-uppercase font-weight-bold">
               About ShoppKua
             </h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
@@ -36,7 +36,7 @@ export const Footer = () => {
 
           {/* Column 2: Shop */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">Shop</h3>
+            <h3 className="h6 text-uppercase font-weight-bold">Shop</h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
               <FooterItem to="/category/clothing" text={"Clothes"} />
               <FooterItem to="/category/accessories" text={"Accessories"} />
@@ -50,7 +50,7 @@ export const Footer = () => {
 
           {/* Column 3: Customer Service */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">
+            <h3 className="h6 text-uppercase font-weight-bold">
               Customer Service
             </h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
@@ -65,7 +65,7 @@ export const Footer = () => {
 
           {/* Column 4: Legal */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">Legal</h3>
+            <h3 className="h6 text-uppercase font-weight-bold">Legal</h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
               <FooterItem to="/terms" text={"Terms & Conditions"} />
               <FooterItem to="/privacy" text={"Privacy Policy"} />
@@ -77,9 +77,7 @@ export const Footer = () => {
         <div className="row">
           {/* Column 5: Contact Us */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">
-              Contact Us
-            </h3>
+            <h3 className="h6 text-uppercase font-weight-bold">Contact Us</h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
               <FooterItem icon={<MailIcon />} text={"support@shoppkua.com"} />
               <FooterItem
@@ -99,9 +97,7 @@ export const Footer = () => {
           </div>
           {/* Column 6: Follow Us */}
           <div className="col-md-3">
-            <h3 className="h6 text-uppercase font-weight-bold mb-3">
-              Follow Us
-            </h3>
+            <h3 className="h6 text-uppercase font-weight-bold">Follow Us</h3>
             <ul className="list-unstyled text-muted small d-flex flex-column gap-1">
               <FooterItem
                 href="https://www.facebook.com/shoppkua"

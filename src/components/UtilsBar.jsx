@@ -25,7 +25,7 @@ export const UtilsBar = () => {
         />
         <span className="mt-1">ShoppKua</span>
       </Link>
-      <div className="d-flex align-items-center  w-25 position-relative">
+      <div className="d-flex align-items-center w-25 position-relative ms-md-5">
         <SearchIcon className="position-absolute ms-3" />
         <input
           className="form-control ps-5 rounded-pill"
