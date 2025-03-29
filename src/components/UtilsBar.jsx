@@ -14,15 +14,16 @@ export const UtilsBar = () => {
     <div className="d-flex justify-content-around align-items-center border-bottom py-2  bg-light">
       <Link
         to="/"
-        className="d-flex align-items-center gap-1 navbar-brand fs-4 text-success"
+        className="d-flex align-items-center gap-1 navbar-brand fs-3 text-success"
+        style={{ fontFamily: "Courgette" }}
       >
         <img
           src={CloverShoppKua}
           alt="Logo"
           className="ShoppKua logo"
-          style={{ width: "24px", height: "auto" }}
+          style={{ width: "28px", height: "auto" }}
         />
-        ShoppKua
+        <span className="mt-1">ShoppKua</span>
       </Link>
       <div className="d-flex align-items-center  w-25 position-relative">
         <SearchIcon className="position-absolute ms-3" />
