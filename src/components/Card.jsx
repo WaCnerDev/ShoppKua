@@ -17,47 +17,67 @@ export const Card = ({
     return title.length > 46 ? title.substring(0, 46) + "..." : title;
   };
 
-  return (
-    <div className="card">
-      <div className="card-body">
-        <div className="image-container">
-          <img src={image} alt={title} className="card-image" />
-        </div>
-        <div className="card-content">
-          <h5 className="card-title">{truncateTitle(title)}</h5>
-          <div className="d-flex justify-content-between pb-2">
-            <Rating
-              name="half-rating-read"
-              defaultValue={rating.rate}
-              precision={0.5}
-              readOnly
-            />
-            <p className="card-price">${price}</p>
-          </div>
+  return isLoading ? (
+    <div className="card w-100 h-100" aria-hidden="true">
+      <div className="image-container">
+        <span class="placeholder w-100 h-100 bg-secondary"></span>
+      </div>
+      <div className="placeholder-glow mb-2">
+        <span class="placeholder col-12"></span>
+      </div>
+      <div className="row mb-2 mx-0 placeholder-glow gap-2">
+        <span class="placeholder col"></span>
+        <span class="placeholder col"></span>
+      </div>
+      <a
+        class="btn btn-success disabled placeholder w-100 rounded"
+        aria-disabled="true"
+      ></a>
+    </div>
+  ) : (
+    <div className="card w-100 h-100">
+      <div className="image-container">
+        <img src={image} className="card-image card-img-top py-2" alt={title} />
+      </div>
+      <div className="card-body flex-grow-1">
+        <h5
+          className="card-title mb-2"
+          style={{ height: "56px", overflow: "hidden" }}
+        >
+          {truncateTitle(title)}
+        </h5>
+        <div className="row mb-2">
+          <Rating
+            name="half-rating-read"
+            value={rating}
+            precision={0.5}
+            readOnly
+            className="col"
+          />
+          <p className="col card-text fw-bold text-end">Price: ${price}</p>
         </div>
 
-        {added ? (
-          <button
-            className="btn-remove"
-            type="button"
-            onClick={() => {
-              onRemoveItem();
-            }}
-          >
-            Remove
-          </button>
-        ) : (
-          <button
-            className="btn-add"
-            type="button"
-            onClick={() => {
-              onAddItem();
-            }}
-          >
-            Add
-          </button>
-        )}
+        <div className="card-actions">
+          {added ? (
+            <button
+              className="btn btn-danger w-100"
+              onClick={onRemoveItem}
+              disabled={isLoading}
+            >
+              Remove
+            </button>
+          ) : (
+            <button
+              className="btn btn-success btn-add w-100"
+              onClick={onAddItem}
+              disabled={isLoading}
+            >
+              Add to Cart
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
 };
+//

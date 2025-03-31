@@ -46,26 +46,27 @@ export const ShoppingPage = () => {
   }, [products]);
 
   return (
-    <>
-      <div className="grid-layout">
-        {products.map((product) => (
-          <Card
-            key={product.id}
-            image={product.image}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            rating={product.rating}
-            added={isAdded(product.id)}
-            isLoading={isLoading}
-            onAddItem={() => handlerAddItem(product)}
-            onRemoveItem={() => handlerRemoveItem(product.id)}
-            onIncreaseQuantity={handlerIncreaseQuantity}
-            onDecreaseQuantity={handlerDecreaseQuantity}
-            onClearShoppingCart={handlerClearShoppingCart}
-          />
-        ))}
-      </div>
-    </>
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {isLoading
+        ? products.map((product) => (
+            <div className="col" key={product.id}>
+              <Card
+                image={product.image}
+                title={product.title}
+                price={product.price}
+                rating={product.rating.rate}
+                onAddItem={() => handlerAddItem(product)}
+                onRemoveItem={() => handlerRemoveItem(product.id)}
+                added={isAdded(product.id)}
+                isLoading={!isLoading}
+              />
+            </div>
+          ))
+        : Array.from({ length: 6 }).map((_, index) => (
+            <div className="col" key={index}>
+              <Card isLoading={true} />
+            </div>
+          ))}
+    </div>
   );
 };

@@ -1,3 +1,5 @@
+/* 
+
 :root {
   --border-color: linear-gradient(90deg, rgba(0, 113, 54, 1) 56%, rgba(0, 255, 120, 1) 100%);
 }
@@ -20,17 +22,17 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
+ */
 
 .card:hover,
 .card:active {
   transform: translateY(-5px) scale(1.02);
-  background: var(--border-color);
+  /* background: var(--border-color); */
 }
 
 .card:hover .card-image {
   opacity: 0.9;
 }
-
 
 .image-container {
   width: 100%;
@@ -45,7 +47,18 @@
   object-fit: contain;
 }
 
-.grid-layout {
+.btn-add {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.card:hover .btn-add {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
@@ -103,4 +116,4 @@
 
 .btn-remove:hover {
   background-color: #a04545;
-}
+} */
