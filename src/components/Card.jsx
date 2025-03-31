@@ -35,7 +35,7 @@ export const Card = ({
       ></a>
     </div>
   ) : (
-    <div className="card w-100 h-100">
+    <div className="card w-100 h-100 shadow-sm">
       <div className="image-container">
         <img src={image} className="card-image card-img-top py-2" alt={title} />
       </div>

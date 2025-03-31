@@ -1,33 +1,8 @@
-/* 
-
-:root {
-  --border-color: linear-gradient(90deg, rgba(0, 113, 54, 1) 56%, rgba(0, 255, 120, 1) 100%);
-}
-
-.card {
-  background: white;
-  padding: 2px;
-  border-radius: 16px;
-  position: relative;
-  border: none;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 16px;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
- */
-
 .card:hover,
 .card:active {
   transform: translateY(-5px) scale(1.02);
-  /* background: var(--border-color); */
+  cursor: pointer;
+  /*background: linear-gradient(90deg, rgba(0, 113, 54, 1) 56%, rgba(0, 255, 120, 1) 100%); */
 }
 
 .card:hover .card-image {
@@ -58,62 +33,12 @@
   transform: translateY(0);
 }
 
-/* .grid-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-title {
-  height: 56px;
-  overflow: hidden;
-  margin: 0;
-}
-
-.card-description {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.card-price {
-  margin: 0;
-  font-weight: bold;
-}
-
-.btn-add {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.card:hover .btn-add {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.btn-add:hover {
-  background-color: #45a049;
-}
-
+/*
 .btn-remove {
   background-color: #af4c4c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .btn-remove:hover {
   background-color: #a04545;
-} */
+} 
+*/
