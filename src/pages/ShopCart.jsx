@@ -1,29 +1,15 @@
-import React, { useContext } from "react";
-import { ShopCartContext } from "../context/ShopCartContext";
+import React from "react";
 
-export const ShopCart = () => {
-  const {
-    shoppingList,
-    removeShoppingItem,
-    increaseQuantity,
-    decreaseQuantity,
-    clearShoppingCart,
-  } = useContext(ShopCartContext);
-
-  const calculateTotal = () => {
-    return shoppingList.reduce(
-      (accumulator, item) => accumulator + item.price * item.quantity,
-      0
-    );
-  };
-
-  const formatPrice = (price) => {
-    return price.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-    });
-  };
-
+export const ShopCart = ({
+  shoppingList,
+  formatPrice,
+  decreaseQuantity,
+  increaseQuantity,
+  removeShoppingItem,
+  calculateTotal,
+  clearShoppingCart,
+  print,
+}) => {
   return (
     <>
       <table className="table table-striped">
@@ -73,7 +59,7 @@ export const ShopCart = () => {
       <h4>Total: {formatPrice(calculateTotal())}</h4>
 
       <div className="d-grid gap-2">
-        <button className="btn btn-danger" onClick={() => clearShoppingCart()}>
+        <button className="btn btn-danger" onClick={clearShoppingCart}>
           Clear shopping cart
         </button>
         <button

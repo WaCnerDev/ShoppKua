@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Home } from "../pages/Home";
-import { ShopCart } from "../pages/ShopCart";
+import { ShopCartContainer } from "../containers/ShopCartContainer";
 import { ProductProvider } from "../context/ProductProvider";
 import { ShopCartProvider } from "../context/ShopCartProvider";
 import { Footer } from "./Footer";
@@ -15,7 +15,7 @@ export const Store = () => {
         <div className="container py-5">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shopCart" element={<ShopCart />} />
+            <Route path="/shopCart" element={<ShopCartContainer />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </div>
