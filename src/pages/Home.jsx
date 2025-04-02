@@ -1,21 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Card } from "../components/Card";
 import { ProductContext } from "../context/ProductContext";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
-import "../styles/ShoppingCart.css";
+import { ShopCartContext } from "../context/ShopCartContext";
 
-export const ShoppingPage = () => {
+export const Home = () => {
   const { products } = useContext(ProductContext);
   const [isLoading, setIsLoading] = useState(true);
 
-  const {
-    shoppingList,
-    addShoppingItem,
-    removeShoppingItem,
-    increaseQuantity,
-    decreaseQuantity,
-    clearShoppingCart,
-  } = useContext(ShoppingCartContext);
+  const { shoppingList, addShoppingItem, removeShoppingItem } =
+    useContext(ShopCartContext);
 
   const handlerAddItem = (item) => {
     addShoppingItem(item);
@@ -23,18 +16,6 @@ export const ShoppingPage = () => {
 
   const handlerRemoveItem = (id) => {
     removeShoppingItem(id);
-  };
-
-  const handlerIncreaseQuantity = (id) => {
-    increaseQuantity(id);
-  };
-
-  const handlerDecreaseQuantity = (id) => {
-    decreaseQuantity(id);
-  };
-
-  const handlerClearShoppingCart = () => {
-    clearShoppingCart();
   };
 
   const isAdded = (id) => {

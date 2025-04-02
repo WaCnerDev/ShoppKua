@@ -1,26 +1,26 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ShoppingPage } from "../pages/ShoppingPage";
-import { ShoppingCartPage } from "../pages/ShoppingCartPage";
+import { Home } from "../pages/Home";
+import { ShopCart } from "../pages/ShopCart";
 import { ProductProvider } from "../context/ProductProvider";
-import { ShoppingCartProvider } from "../context/ShoppingCartProvider";
+import { ShopCartProvider } from "../context/ShopCartProvider";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export const Store = () => {
   return (
     <ProductProvider>
-      <ShoppingCartProvider>
+      <ShopCartProvider>
         <Header />
         <div className="container py-5">
           <Routes>
-            <Route path="/" element={<ShoppingPage />} />
-            <Route path="/shopCart" element={<ShoppingCartPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/shopCart" element={<ShopCart />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </div>
         <Footer />
-      </ShoppingCartProvider>
+      </ShopCartProvider>
     </ProductProvider>
   );
 };

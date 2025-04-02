@@ -1,7 +1,7 @@
 import React from "react";
 import CloverShoppKua from "../assets/CloverShoppKua.png";
 import SearchIcon from "@mui/icons-material/Search";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { ShopCartContext } from "../context/ShopCartContext";
 import { useContext } from "react";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export const UtilsBar = () => {
-  const { shoppingList } = useContext(ShoppingCartContext);
+  const { shoppingList } = useContext(ShopCartContext);
   return (
     <div className="d-flex justify-content-around align-items-center border-bottom py-2  bg-light">
       <Link

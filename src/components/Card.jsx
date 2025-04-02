@@ -20,17 +20,17 @@ export const Card = ({
   return isLoading ? (
     <div className="card w-100 h-100" aria-hidden="true">
       <div className="image-container">
-        <span class="placeholder w-100 h-100 bg-secondary"></span>
+        <span className="placeholder w-100 h-100 bg-secondary"></span>
       </div>
       <div className="placeholder-glow mb-2">
-        <span class="placeholder col-12"></span>
+        <span className="placeholder col-12"></span>
       </div>
       <div className="row mb-2 mx-0 placeholder-glow gap-2">
-        <span class="placeholder col"></span>
-        <span class="placeholder col"></span>
+        <span className="placeholder col"></span>
+        <span className="placeholder col"></span>
       </div>
       <a
-        class="btn btn-success disabled placeholder w-100 rounded"
+        className="btn btn-success disabled placeholder w-100 rounded"
         aria-disabled="true"
       ></a>
     </div>

@@ -1,10 +1,9 @@
-import React, {useReducer} from "react";
-import { ShoppingCartContext } from "./ShoppingCartContext";
+import React, { useReducer } from "react";
+import { ShopCartContext } from "./ShopCartContext";
 
 const initialState = [];
 
-export const ShoppingCartProvider = ({ children }) => {
-
+export const ShopCartProvider = ({ children }) => {
   const addShoppingItem = (item) => {
     item.quantity = 1;
     dispatch({ type: "ADD_ITEM", payload: item });
@@ -26,7 +25,7 @@ export const ShoppingCartProvider = ({ children }) => {
     dispatch({ type: "CLEAR_SHOPPING_CART" });
   };
 
-  const shoppingCartReducer = (state, action) => {
+  const ShopCartReducer = (state, action) => {
     switch (action.type) {
       case "ADD_ITEM":
         return [...state, action.payload];
@@ -41,20 +40,29 @@ export const ShoppingCartProvider = ({ children }) => {
       case "DECREASE_QUANTITY":
         return state.map((item) =>
           item.id === action.payload && item.quantity > 1
-        ? { ...item, quantity: item.quantity - 1 }
-        : item
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
         );
       case "CLEAR_SHOPPING_CART":
         return [];
       default:
         return state;
     }
-  }
-  const [shoppingList, dispatch] = useReducer(shoppingCartReducer, initialState);
+  };
+  const [shoppingList, dispatch] = useReducer(ShopCartReducer, initialState);
 
   return (
-    <ShoppingCartContext.Provider value={{ shoppingList, addShoppingItem, removeShoppingItem, increaseQuantity, decreaseQuantity, clearShoppingCart }}>
+    <ShopCartContext.Provider
+      value={{
+        shoppingList,
+        addShoppingItem,
+        removeShoppingItem,
+        increaseQuantity,
+        decreaseQuantity,
+        clearShoppingCart,
+      }}
+    >
       {children}
-    </ShoppingCartContext.Provider>
+    </ShopCartContext.Provider>
   );
 };

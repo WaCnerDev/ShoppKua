@@ -2,7 +2,6 @@
 .card:active {
   transform: translateY(-5px) scale(1.02);
   cursor: pointer;
-  /*background: linear-gradient(90deg, rgba(0, 113, 54, 1) 56%, rgba(0, 255, 120, 1) 100%); */
 }
 
 .card:hover .card-image {

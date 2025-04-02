@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { ShopCartContext } from "../context/ShopCartContext";
 
-export const ShoppingCartPage = () => {
+export const ShopCart = () => {
   const {
     shoppingList,
     removeShoppingItem,
     increaseQuantity,
     decreaseQuantity,
     clearShoppingCart,
-  } = useContext(ShoppingCartContext);
+  } = useContext(ShopCartContext);
 
   const calculateTotal = () => {
     return shoppingList.reduce(
