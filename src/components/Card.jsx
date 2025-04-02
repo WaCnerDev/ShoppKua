@@ -39,13 +39,8 @@ export const Card = ({
       <div className="image-container">
         <img src={image} className="card-image card-img-top py-2" alt={title} />
       </div>
-      <div className="card-body flex-grow-1">
-        <h5
-          className="card-title mb-2"
-          style={{ height: "56px", overflow: "hidden" }}
-        >
-          {truncateTitle(title)}
-        </h5>
+      <div className="card-body flex-grow-1 overflow-hidden">
+        <h5 className="card-title mb-2">{truncateTitle(title)}</h5>
         <div className="row mb-2">
           <Rating
             name="half-rating-read"
@@ -60,7 +55,7 @@ export const Card = ({
         <div className="card-actions">
           {added ? (
             <button
-              className="btn btn-danger w-100"
+              className="btn btn-remove w-100"
               onClick={onRemoveItem}
               disabled={isLoading}
             >

@@ -33,12 +33,16 @@
   transform: translateY(0);
 }
 
-/*
+.card-title {
+  height: 56px;
+}
+
 .btn-remove {
   background-color: #af4c4c;
+  color: white;
 }
 
 .btn-remove:hover {
   background-color: #a04545;
-} 
-*/
+  color: white;
+}
