@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/FooterItem.css";
 
 export const FooterItem = ({ to, text, icon, href }) => {
   const renderIcon = () => {
@@ -19,7 +20,7 @@ export const FooterItem = ({ to, text, icon, href }) => {
   return (
     <li>
       {to ? (
-        <Link to={to} className="text-reset">
+        <Link to={to} className="footer-nav text-reset">
           {renderIcon()}
           {text}
         </Link>
@@ -28,13 +29,13 @@ export const FooterItem = ({ to, text, icon, href }) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="d-flex align-items-start gap-2 text-reset"
+          className="footer-nav d-flex align-items-start gap-2 text-reset"
         >
           {renderIcon()}
           {text}
         </a>
       ) : (
-        <span className="d-flex align-items-start gap-2 ">
+        <span className="d-flex align-items-start gap-2">
           {renderIcon()}
           <span className="text-muted">{text}</span>
         </span>

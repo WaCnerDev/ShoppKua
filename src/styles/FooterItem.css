@@ -1,0 +1,16 @@
+.footer-nav,
+.footer-info {
+  text-decoration: none;
+}
+
+.footer-info:hover,
+.footer-info:active {
+  text-decoration: underline;
+  color: green !important;
+}
+
+.footer-nav:hover,
+.footer-nav:active {
+  text-decoration: underline;
+  color: green !important;
+}
