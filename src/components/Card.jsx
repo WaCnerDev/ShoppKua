@@ -20,19 +20,21 @@ export const Card = ({
   return isLoading ? (
     <div className="card w-100 h-100" aria-hidden="true">
       <div className="image-container">
-        <span className="placeholder w-100 h-100 bg-secondary"></span>
+        <span className="placeholder w-100 h-100 bg-success-subtle"></span>
       </div>
-      <div className="placeholder-glow mb-2">
-        <span className="placeholder col-12"></span>
+      <div className="col-12 p-3">
+        <div className="placeholder-glow">
+          <span className="placeholder placeholder-lg rounded-2 mb-2 col-12"></span>
+          <div className="row mb-2 mx-0">
+            <span className="placeholder col me-5 rounded-1"></span>
+            <span className="placeholder col-4 rounded-1 ms-1"></span>
+          </div>
+        </div>
+        <a
+          className="btn btn-success disabled placeholder w-100 rounded"
+          aria-disabled="true"
+        ></a>
       </div>
-      <div className="row mb-2 mx-0 placeholder-glow gap-2">
-        <span className="placeholder col"></span>
-        <span className="placeholder col"></span>
-      </div>
-      <a
-        className="btn btn-success disabled placeholder w-100 rounded"
-        aria-disabled="true"
-      ></a>
     </div>
   ) : (
     <div className="card w-100 h-100 shadow-sm">
